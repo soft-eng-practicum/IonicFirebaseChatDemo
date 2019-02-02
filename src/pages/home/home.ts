@@ -9,7 +9,7 @@ import {ChatPage} from '../chat/chat';
 })
 export class HomePage {
 
-  username: string = '';
+//declare the username variable
 
   constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
 
@@ -24,12 +24,7 @@ export class HomePage {
     alert.present();
   }
   loginUser(){
-    if(/^[a-zA-Z0-9]+$/.test(this.username)){
-      this.navCtrl.push(ChatPage, {
-        username: this.username
-      });
-    }else{
-      this.showAlert('Error', 'Invalid Username');
-    }
+    //Populate with method to "log the user in". Does not actually handle any sort of authentication.
+    //Consider it a dummy login.
   }
 }

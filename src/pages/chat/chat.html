@@ -15,22 +15,15 @@
 
 <ion-content padding>
 
-    <div id="chatMessages">
-      <div *ngFor="let message of messages" [class]="message.specialMessage ? 'message special' : 'message'">
-        <div [class]="message.username == username ? 'innerMessage messageRight' : 'innerMessage messageLeft'">
-          <div class="username">{{ message.username }}</div>
-          <div class="messageContent">{{ message.message }}</div>
-        </div>
-      </div>
-    </div>
+  <!--
+    Here we're going to implement an ngFor loop to cycle through our messages array and
+    display them. Don't worry, the .scss is already handled for you so you don't have to
+    format anything. Feel free to play around with it if you'd like.
+  -->
 
   </ion-content>
 
-  <ion-footer>
-    <ion-toolbar>
-      <div id="footer">
-        <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>
-        <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon> </button></div>
-      </div>
-    </ion-toolbar>
-  </ion-footer>
+
+<!--
+  Here we're going to place the footer for the input text and the send button
+-->
